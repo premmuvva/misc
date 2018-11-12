@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SubscriptionList</title>
+</head>
+<style>
+        table {
+             border-collapse: separate;
+         }
+
+        table,
+            th,
+            td {
+                 border: 1px solid black;
+                padding: 5px 5px 5px 5px;
+             }
+    </style>
+<body>
+<table>
+	<tr>
+		<th>Magazine Name:</th>
+		<th>Price:</th>
+		<th>Published on:</th>
+		<th>Magazine cover:</th>
+		<th>Category</th>
+		<th>Select subsription type</th>
+		<th>last date</th>
+	</tr>
+
+	{% for b in magazines %}
+	<tr>
+		<th>{{ b.magazine_name }}</th>
+		<th>{{ b.price }}
+		<th>{{ b.published_on }}</th>
+		<th><img src="{{ b.book_cover.url}}" width="75px" height="100px"></th>
+		<th>{{ b.category }}</th>
+		<th>	
+			{% for stat in bstatus %} 
+				{{stat.book}}
+				{% ifequal b.id  stat.book %}
+					
+						{{stat.status}},
+					
+					
+				{% endifequal %}
+				 
+			{% endfor %}
+		</th>
+		
+	{% endfor %}
+
+	</tr>
+</table>
+
