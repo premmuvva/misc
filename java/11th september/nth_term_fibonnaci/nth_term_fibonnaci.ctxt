@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=nth_term_fibonnaci
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ nth_term_fibonnaci\ here.\r\nWAP\ to\ print\ nth\ term\ of\ the\ Fibonacci\ series\ and\ also\ print\ the\ \r\nprime\ numbers\ present\ in\ the\ Fibonacci\ series.\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=nth_term_fibonnaci()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ nth_term_fibonnaci\r\n
+comment2.params=n
+comment2.target=boolean\ isPrime(int)
+comment3.params=y
+comment3.target=int\ sampleMethod(int)
+comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

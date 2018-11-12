@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=anagrams
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ anagrams\ here.\r\nWrite\ a\ Program\ in\ Java\ to\ input\ a\ word\ and\ print\ its\ anagrams.\r\nNote\:\ Anagrams\ are\ words\ made\ up\ of\ all\ the\ characters\ present\ in\ \r\nthe\ original\ word\ by\ re-arranging\ the\ characters.\ \r\nExample\:\ Anagrams\ of\ the\ word\ TOP\ are\:\ TOP,\ TPO,\ OPT,\ OTP,\ PTO\ and\ POT.\uFFFD\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=anagrams()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ anagrams\r\n
+comment2.params=str
+comment2.target=void\ sampleMethod(java.lang.String)
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

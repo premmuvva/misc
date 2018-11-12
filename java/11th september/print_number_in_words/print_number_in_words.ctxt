@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=print_number_in_words
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ print_number_in_words\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=print_number_in_words()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ print_number_in_words\r\n
+comment2.params=y
+comment2.target=void\ sampleMethod(int)
+comment2.text=\r\n\ printing\ 54\ as\ "five\ four"\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
