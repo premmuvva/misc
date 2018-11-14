@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Magazines List</title>
+
+{% endblock %}
+{% block body %}
+	<center>
+		<table>
+			<tr bgcolor="silver">
+				<th>Magazine Name:</th>
+				<th>Price:</th>
+				<th>Publisher:</th>
+				<th>Magazine cover:</th>
+				<th>subsription type</th>
+				<th>Subsciption Status</th>
+			</tr>
+			{% for b in magazines %}
+			<tr bgcolor="gray cloud">
+				<th><a href="{% url 'magazine' b.id  %}"> {{ b.magazine_name }} </a></th>
+				<th>Rs.{{ b.price }}/-
+				<th>{{ b.supplier_id }}</th>
+				<th><img src="{{ b.magazine_cover.url}}" width="75px" height="100px"></th>
+				<th>{{ b.reference_code.ref_desciption }}</th>
+				<th><a href="{% url 'unsubscribe' b.id  %}"> UnSubscribe </a>
+					<br><br>
+					<a href="{% url 'cart' b.id  %}"> Subscribe </a>
+					
+				</th>
+				<br>	
+			</tr>
+			{% endfor %}
+		</table>
+	</center>
+{% endblock %}
+
+

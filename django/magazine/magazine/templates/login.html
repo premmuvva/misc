@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME PAGE</title>
+</head>
+<body>
+	<center>
+	<h2>Log in here</h2>
+	<h3> {{ loggedout }}</h3>
+	<form action="{% url 'loginuser' %}" method="POST">
+		
+		{% csrf_token %}
+
+		EMAIL<input type="text" name="eemail"><br><br>
+		PASSWORD<input type="password" name="password"><br><br>
+		<th><a href="{% url 'loginuser' %}">forgot password? </a></th>
+		<br><br>
+		<input type="submit">
+		<input type="reset">
+	</form>	
+
+	<h2>Want to sign up <a href="{% url 'signupuser'%}">click here</a></h2>
+{{ error }}
+</center>
+</body>
+</html>

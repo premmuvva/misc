@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    {% endblock %}
+</head>
+<style>
+	table{
+		border-collapse: separate;
+	}
+
+	table,
+	th,
+	td {
+		border: .01px solid black;
+		padding: 1px 1px 5px 1px;
+	}
+</style>
+<body style="background-image:url({{ b_g }})">
+    <br>
+    <br>
+	<div>
+        <table style="width:60%;float: left",bgcolor="#00FF00">
+            <tr bgcolor="lime">
+                {% if request.user.is_staff %}
+                    <th><a href="{% url 'homepage' %}"> Homepage </a></th>
+                    <!-- <th><a href="{% url 'homepage' %}">Admin Monitor Page </a></th> -->
+                    <th> <a href="{% url 'view_profile' %}" style="text-decoration:none;"> Profile </a></th>
+                    <th></th>
+                    <th> <a href="{% url 'edit_profile' %}" style="text-decoration:none;">Edit Profile </a></th>
+                    <th></th>
+                    <th><a href="{% url 'entermagazine' %}">Enter Magazine Details</a></th>
+                    <th><a href="{% url 'enter_reference_frequency' %}">Enter new frequency details</a></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><a href="{% url 'entersupplier' %}">Enter Suppliers</a></th>
+                {% else %}
+                    <th><a href="{% url 'homepage' %}"style="text-decoration:none;"> Home </a></th>
+                    <th></th>
+                    <th> <a href="{% url 'view_profile' %}" style="text-decoration:none;"> Profile </a></th>
+                    <th></th>
+                    <th> <a href="{% url 'edit_profile' %}" style="text-decoration:none;">Edit Profile </a></th>
+                    <th></th>
+                    <th> <a href="{% url 'change_password' %}" style="text-decoration:none;">Change Password </a></th>
+                    <th></th>
+                    <th><a href="{% url 'magazine_list' %}" style="text-decoration:none;">All Magazines</a></th>
+                    <th></th>
+                    <th><a href="{% url 'search' %}" style="text-decoration:none;">Search</a></th>
+                    <th></th>
+                    <th><a href="{% url 'subscription_list' %}" style="text-decoration:none;">Subscribed List</a></th>
+                    <th></th>
+                    <th><a href="{% url 'cart' %}" style="text-decoration:none;">Cart</a></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                {% endif %}
+            </tr>
+		</table>
+		<table style="width:10%;float: right">
+			<tr bgcolor="lime">
+				<th><a href="{% url 'logoutuser' %}"> Logout here  </a></th>
+			</tr>
+		</table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <center>
+	{% block body %}
+    {% endblock %}
+    </center>
+</body>
+</html>
+
+

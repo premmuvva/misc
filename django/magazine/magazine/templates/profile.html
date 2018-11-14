@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title></title>
+
+{% endblock %}
+{% block body %}
+	<h1>PROFILE DETAILS:</h1>
+	<table style="width:30%;float: center",bgcolor="#00FF00">
+		<p><b><img src="{{ user.photo }}" width="150px" height="200px"></b></p>
+		<tr bgcolor="lime"><th><p>USER NAME 	: <b>{{ user.username }}</b></p></th></tr>	
+		<tr bgcolor="lime"><th><p>FIRST NAME 	: <b>{{user.first_name}}</b></p></th></tr>
+		<tr bgcolor="lime"><th><p>LAST NAME 	: <b>{{user.last_name}}</b></p></th></tr>
+		<tr bgcolor="lime"><th><p>EMAIL     	: <b>{{user.email}}</b></p></th></tr>
+		<tr bgcolor="lime"><th><p>PHONE NUMBER : <b>{{user.phone_number}}</b></p></th></tr>
+		<tr bgcolor="lime"><th> <p>Address     : <b>{{user.user_address}}</b></p></th></tr>
+	</table>
+{% endblock %}

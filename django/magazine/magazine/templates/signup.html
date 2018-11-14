@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.helptext{
+			display: none;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<center>
+	<form action="{% url 'signupuser' %}" method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" >		
+	</form>
+	</center>
+	<h2>Are you already a user <a href="{% url 'loginuser' %}">click here</a></h2>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title></title>
+
+{% endblock %}
+{% block body %}
+	<h1>PROFILE DETAILS:</h1>
+    <table style="width:30%;float: center",bgcolor="#00FF00">
+        <p><b><img src="{{ b.magazine_cover.url}}" width="150px" height="200px"></b></p>
+		<tr bgcolor="lime"><th><p>MAGAZINE ID 	: <b>{{ b.id }}</b></p></th></tr>	
+		<tr bgcolor="lime"><th><p>MAGAZINE NAME 	: <b>{{b.magazine_name}}</b></p></th></tr>
+		<tr bgcolor="lime"><th><p>PRICE     	: <b>{{b.price}}</b></p></th></tr>
+        <tr bgcolor="lime"><th><p>DESCRIPTION : <b>{{b.desc}}</b></p></th></tr>
+        <tr bgcolor="lime"><th><a href="{% url 'unsubscribe' b.id  %}"> UnSubscribe </a>
+						
+            <br><br>
+            <a href="{% url 'cart' b.id  %}"> Subscribe </a>
+            
+        </th></tr>
+	</table>
+{% endblock %}

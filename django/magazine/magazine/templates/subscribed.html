@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarked List</title>
+  <style>
+        table {
+             border-collapse: separate;
+         }
+
+        table,
+            th,
+            td {
+                 border: 1px solid black;
+                padding: 5px 5px 5px 5px;
+             }
+    </style>
+</head>
+<body>
+  <center>
+  <h3>total Book List: <a href="{% url 'magazine_list' %}">click</a></h3>
+  <br><br><br>
+   <a href="{% url 'homepage' %}"> Homepage </a>
+  </center>
+
+  <h2>Bookmarked list</h2>
+  <table>
+  <tr>
+    <th>Magazine Name:</th>
+    <th>Supplier:</th>
+    <th>Published on:</th>
+    <th>Mag<!DOCTYPE html>
+<html>
+<head>
+  <title>MagazinesList</title>
+</head>
+<style>
+        table {
+             border-collapse: separate;
+         }
+
+        table,
+            th,
+            td {
+                 border: 1px solid black;
+                padding: 5px 5px 5px 5px;
+             }
+    </style>
+<body>
+<table>
+  <tr>
+    <th>Magazine Name:</th>
+    <th>Price:</th>
+    <th>Published on:</th>
+    <th>Magazine cover:</th>
+    <th>subsription type</th>
+    <th>last date</th>
+  </tr>
+
+  {% for b in magazines %}
+  <tr>
+    <th>{{ b.magazine_name }}</th>
+    <th>{{ b.price }}
+    <th>{{ b.supplier_id }}</th>
+    <th><img src="{{ b.magazine_cover.url}}" width="75px" height="100px"></th>
+    <th>{{ b.reference_code }}</th>
+  {% endfor %}
+
+  </tr>
+</table>
+
+<br>
+<br>
+<center> 
+  <a href="{% url 'logoutuser' %}"> Logout here </a>
+  <br><br><br>
+   <a href="{% url 'homepage' %}"> Homepage </a>
+</center>
+</body>
+</html>
+
+
+ cover:</th>
+    <th>Category</th>
+  </tr>
+
+  
+    
+    {% for i in bstatus %}
+
+    {% ifequal i.status 'bookmarked'  %}
+
+      {% for b in books %}
+          {% ifequal i.book_id  b.id %}
+            <tr>
+            <th>{{ b.title }}</th>
+    <th>{% for auth in b.author.all %}  {{auth.author_name}}, {% endfor %}
+    <th>{{ b.published_on }}</th>
+    <th><img src="{{ b.book_cover.url}}" width="75px" height="100px"></th>
+    <th>{{ b.category }}</th>
+            
+          {% endifequal %}
+            
+       {% endfor %} 
+    
+    {% endifequal %}
+  
+    {% endfor %}</th>
+  </tr>
+</table>
+
+</body>
+</html>

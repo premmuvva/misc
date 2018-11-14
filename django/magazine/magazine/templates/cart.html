@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block head %}
+	<title>CART</title>
+{% endblock %}
+{% block body %}
+
+<h3>ONE LAST STEP TO GOO!!!!!</h3>
+<table>
+	<tr>
+		<th>Magazine Name:</th>
+		<th>Price:</th>
+		<th>Published on:</th>
+		<th>Magazine cover:</th>
+		<th>Select subsription type</th>
+		<th>last date</th>
+	</tr>
+
+	{% for b in bstatus %}
+		{% ifequal b.status 2 %}
+		<tr>
+		<th>{{ b.magazine_name }}</th>
+		<th>Rs.{{ b.magazine_name.price }}/-
+		<th>{{ b.magazine_name.published_on }}</th>
+		<th><img src="{{ b.magazine_name.magazine_cover.url}}" width="75px" height="100px"></th>
+		<th>{{ b.magazine_name.reference_code }}</th>
+		<th><a href="{% url 'unsubscribe' b.magazine_name.id  %}"> UnSubscribe </a>
+		</th></tr>
+		<br>
+		{% endifequal %}
+	{% endfor %}
+	<h2>Rs.{{total}}/- only</h2>
+	<h2><a href="{% url 'pay' %}"> pay now </a></h2><br><br>
+	
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Enter Magazine Details:</title>
+
+{% endblock %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+    <b><h3>
+    {% csrf_token %}
+    {{ book.as_p }}		
+    <input type="submit" >
+</h3>
+</b>
+</form>
+{% endblock %}

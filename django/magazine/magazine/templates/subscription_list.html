@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Subscribed List</title>
+{% endblock %}
+{% block body %}
+<table>
+	<tr bgcolor="silver">
+		<th>Magazine Name:</th>
+		<th>Price:</th>
+		<th>Published on:</th>
+		<th>Magazine cover:</th>
+		<th>Select subsription type</th>
+		<th>last date</th>
+	</tr>
+
+	{% for b in bstatus %}
+		{% ifequal b.status  3 %}
+		<tr bgcolor="gray cloud">
+		<th>{{ b.magazine_name }}</th>
+		<th>Rs.{{ b.magazine_name.price }}//-
+		<th>{{ b.magazine_name.publisher }}</th>
+		<th><img src="{{ b.magazine_name.magazine_cover.url}}" width="75px" height="100px"></th>
+		<th>{{ b.magazine_name.reference_code.ref_desciption }}</th>
+		<th><a href="{% url 'unsubscribe' b.magazine_name.id  %}"> UnSubscribe </a>
+		</th>
+		<br>
+	</tr>
+	{% endifequal %}
+	{% endfor %}
+</table>
+{% endblock %}

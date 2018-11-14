@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Search</title>
+
+{% endblock %}
+{% block body %}
+    <h3>total Book List: <a href="{% url 'magazine_list' %}">click</a></h3>
+    <br>
+    <br>
+    <br>
+     <center>
+      
+         <table>
+           <tr bgcolor="lime">
+             <th><h2>ENTER COMPLETE OR PARTIAL TITLE OF THE MAGAZINE:</h2></th>
+           </tr>
+         </table>
+           
+    <form action="{% url 'search' %}" method="POST">
+    {% csrf_token %}
+      <input type="text" name="searchme">
+      <input type="submit" name="search">
+    </form>
+   
+    <table>
+      <tr bgcolor="lime">
+      <th>Magazine ID</th>
+        <th>Magazine title</th>
+        
+      </tr>
+      <br>
+      <br>
+      {% for b in books %}
+      <tr bgcolor="gray cloud">
+      <th>
+        {{ b.id }}
+      </th>
+      <th>
+          <a href="{% url 'magazine' b.id  %}"> {{ b.magazine_name }} </a>
+      </th>
+      </tr>
+      {% endfor %}
+    </table>
+  {% endblock %}
